@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>/
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Cmd to select multiple elements
+// Use Cmd+mouse to select via lasso
+//
+// Use +/- or Cmd+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Cmd+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>63</y>
+      <w>147</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>Hotel
+--
+-  id:int
+-  name:String
+-  roomno:int
+-  checkin:String
+-  checkout:String
+--
++setName:String 
++setId:int
++setRoomno:int
++setCheckin :String
++setCheckout :String
++getId	:int
++getName :String
++getRoomno:int
++getCheckin:String
++getCheckout:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>98</y>
+      <w>322</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>Hotel Controller
+--
+-Logger Log
+- HotelService service
+- InterfacUserService ser
+-UserRepository Repo
+--
++String home()
++String adminpage()
++String view( @Valid @ModelAttribute 
+("user") Validation v ,BindingResult br)
++String showRegistrationForm(Model model)
++ModelAndView saveOrUpdate(@ModelAttribute("user" )User user)
++String loginuser(@ModelAttribute("user") User user)
++String Userhome()
++String UserAddform()
++ModelAndView saveUserEntry(@ModelAttribute Hotel fruit)
++ModelAndView delete(@PathVariable("id") int id)
++ModelAndView updateCourse(@RequestParam("hid")int id)
++ String getAll(Model m)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>105</y>
+      <w>84</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>126</x>
+      <y>252</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>259</x>
+      <y>329</y>
+      <w>56</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;60.0;20.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>287</y>
+      <w>147</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>HotelTest
+--
++testhotetestcteate:void
++testupdate:void
++testtestbyid:void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>371</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>HotelInterfaceService
+--
++List&lt;Hotel&gt; getallvisitors
++deleteHotelVisitor(int id):void
++saveOrUpdate(Hotel HotelVisit):void
++getHotelVisitorsById(int id)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>56</x>
+      <y>406</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>HotelRepository
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>133</x>
+      <y>378</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;40.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>658</x>
+      <y>98</y>
+      <w>133</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-  id:int
+-  name:String
+-  Email:String
+-  Password:String
+-  Place:String
+--
++setName:String 
++setId:int
++setEmail:String
++setPassword :String
++setPlace :String
++getId	:int
++getName :String
++getEmail:String
++getPassword:String
++getPlace:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>119</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>322</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>InterfacUserService
+--
++saveData(User user)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>595</x>
+      <y>273</y>
+      <w>63</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>70.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>385</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>UserRepository
+--
+-findByName(String name)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>644</x>
+      <y>357</y>
+      <w>35</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;40.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>448</y>
+      <w>231</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>WebSecurityConfig
+--
+#configure(HttpSecurity http):void&lt;&lt;overide&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>329</y>
+      <w>21</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>203</x>
+      <y>252</y>
+      <w>35</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;120.0;30.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>287</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>490</y>
+      <w>245</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GlobalException
+--
++String exceptionHanderNumberFormat(Model m)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>329</y>
+      <w>21</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>7</y>
+      <w>133</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Validation
+--
+-Name:String
+-password:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>56</y>
+      <w>28</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
