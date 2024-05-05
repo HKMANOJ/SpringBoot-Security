@@ -136,11 +136,26 @@ public class HotelConteoller {
 	}
 	
 	@RequestMapping("/userhome")
-	public String Userhome()	{
-	
-		log.info("User Home Page Loaded");
-		return "BookHotel.jsp";
-	}
+    public String Userhome(Model model) {
+        // Retrieve the authentication object from the Security Context
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        // Retrieve the user's name from the authentication object
+        String name = null;
+        if (authentication != null && authentication.isAuthenticated()) {
+            Object principal = authentication.getPrincipal();
+            if (principal instanceof UserDetails) {
+                name = ((UserDetails) principal).getUsername();
+            } else {
+                name = principal.toString();
+            }
+        }
+
+        // Add the username to the model to pass it to the view
+        model.addAttribute("UserName", name);
+
+        return "BookHotel.jsp";
+    }
 	
 	@RequestMapping("/Useraddform")
 	public String UserAddform() {
